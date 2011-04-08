@@ -1,0 +1,54 @@
+08 avr. 2011 17:25:43,068 INFO  ~ Starting C:\play-1.1.1\play-1.1.1\Dolomite
+08 avr. 2011 17:25:43,076 INFO  ~ Module secure is available (C:\play-1.1.1\play-1.1.1\modules\secure)
+08 avr. 2011 17:25:44,195 WARN  ~ You're running Play! in DEV mode
+08 avr. 2011 17:25:44,420 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+08 avr. 2011 17:25:54,733 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
+08 avr. 2011 17:25:54,782 INFO  ~ Application 'Dolomite' is now started !
+08 avr. 2011 17:36:57,391 INFO  ~ From Mock Mailer
+	New email received by
+	From: noreply@hypertopic.org
+	ReplyTo: noreply@hypertopic.org
+	To: "nobody@hypertopic.org" <nobody@hypertopic.org>
+	Subject: Invitation a IF05
+	text/plain: <html>
+<head>
+<meta http-equiv='content-type' content='text/html; charset=UTF-8' />
+</head>
+
+<body>
+
+        <h1>Bienvenue sur IF05 Tryphon Tournesol</h1>
+        <p>Vous avez &eacute;t&eacute; invit&eacute;(e) par votre parrain &agrave; rejoindre la communaut&eacute; IF05.</p>
+        <p>Pour ce faire, veuillez vous inscrire en cliquant <a href='http://localhost:9000/inscription?firstname=Tryphon&amp;lastname=Tournesol&amp;email=nobody%40hypertopic.org&amp;signature=738ece624d8a3e325724379b8ff2990438995ec9'>ici</a>.</p>
+        <p>Apr&egrave;s l'enregistrement, gardez ce courriel pour <a href='http://localhost:9000/inscription?firstname=Tryphon&amp;lastname=Tournesol&amp;email=nobody%40hypertopic.org&amp;signature=738ece624d8a3e325724379b8ff2990438995ec9'>changer votre mot de passe</a> en cas d'oubli.</p>
+        <b>L'&eacute;quipe IF05</b>
+</body>
+
+</html>
+ 
+	
+
+08 avr. 2011 17:44:09,412 INFO  ~ From Mock Mailer
+	New email received by
+	From: noreply@hypertopic.org
+	ReplyTo: noreply@hypertopic.org
+	To: "guillaume.radet@utt.fr" <guillaume.radet@utt.fr>
+	Subject: Invitation a IF05
+	text/plain: <html>
+<head>
+<meta http-equiv='content-type' content='text/html; charset=UTF-8' />
+</head>
+
+<body>
+
+        <h1>Bienvenue sur IF05 radet guillaume</h1>
+        <p>Vous avez &eacute;t&eacute; invit&eacute;(e) par votre parrain &agrave; rejoindre la communaut&eacute; IF05.</p>
+        <p>Pour ce faire, veuillez vous inscrire en cliquant <a href='http://localhost:9000/inscription?firstname=radet&amp;lastname=guillaume&amp;email=guillaume.radet%40utt.fr&amp;signature=8e96d662c2761f540b4cb750354055327edc6981'>ici</a>.</p>
+        <p>Apr&egrave;s l'enregistrement, gardez ce courriel pour <a href='http://localhost:9000/inscription?firstname=radet&amp;lastname=guillaume&amp;email=guillaume.radet%40utt.fr&amp;signature=8e96d662c2761f540b4cb750354055327edc6981'>changer votre mot de passe</a> en cas d'oubli.</p>
+        <b>L'&eacute;quipe IF05</b>
+</body>
+
+</html>
+ 
+	
+

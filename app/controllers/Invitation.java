@@ -49,6 +49,8 @@ public class Invitation extends BaseController {
             String url = "";
             String signature = "";
             String community = "Hypertopic";
+            //String godfather = session.get("nom") + " " + session.get("prenom");
+            //Object mailGodfather = session.get("mail");
             System.out.println("invitenewmember");
             try {
                 url = "http://" + request.domain;
@@ -67,6 +69,7 @@ public class Invitation extends BaseController {
                     community=renderArgs.get("domainName").toString();
                 }
                 if (langue.equals("fr")) {
+                	//Mails.inviteFr("Hypertopic Team <noreply@hypertopic.org>", mail, prenom, nom, url, community, godfather, mailGodfather);
                     Mails.inviteFr("Hypertopic Team <noreply@hypertopic.org>", mail, prenom, nom, url, community);
                 } else {
                     Mails.inviteEn("Hypertopic Team <noreply@hypertopic.org>", mail, prenom, nom, url, community);

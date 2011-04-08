@@ -6,10 +6,12 @@ import java.util.*;
 
 public class Mails extends Mailer {
 
+	//public static void inviteFr (String from, String to, String firstname, String lastname, String url, String community, String godfather, Object mailGodfather) {
 	public static void inviteFr (String from, String to, String firstname, String lastname, String url, String community) {
 		setSubject("Invitation a " + community);
 		addRecipient(to);
 		setFrom(from);
+		//setReplyTo(mailGodfather);
 		send(firstname, lastname, url, community);
 	}
 
