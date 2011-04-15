@@ -8,6 +8,23 @@ import models.*;
 public class LdapTest extends UnitTest {
 
 	@Test
+    public void createUser()
+	{
+		 new LdapUser("flora.dupont@utt.fr", "test", "Flora", "Dupont", "flora.dupont").addUser();
+		}
+
+	@Test
+    public void createAndConnectUser()
+	{
+            // Create a new user and save it
+                new LdapUser("flora.dupont@utt.fr", "test", "Flora", "Dupont", "flora.dupont").addUser();
+
+            // Retrieve the user with login+passwd
+                LdapUser flo = LdapUser.connect("flora.dupont", "test");
+	
+		}
+
+	@Test
     public void createAndRetrieveUser() 
 	{
 	
@@ -18,13 +35,13 @@ public class LdapTest extends UnitTest {
 		LdapUser flo = LdapUser.connect("flora.dupont", "test");
 	    
 	    // Test
-		flo.deleteUser();
+		//flo.deleteUser();
 		
 		assertNotNull(flo); 
 		assertEquals("Flora", flo.getFirstname());
 		assertEquals("Dupont", flo.getLastname());
 		assertEquals("flora.dupont@utt.fr", flo.getEmail());
-	    
+ 			
     }
 	
 	@Test
@@ -32,27 +49,27 @@ public class LdapTest extends UnitTest {
 		// Create a new user and save it
 		new LdapUser("flora.dupont@utt.fr", "test", "Flora", "Dupont", "flora.dupont").addUser();
 		LdapUser flo = LdapUser.connect("flora.dupont", "test");
-		LdapUser stef = LdapUser.connect("stephane.batteux", "pas_le_bon");
-		LdapUser flo2 = LdapUser.connect("flora.dupont", "mauvais_mot_de_passe");
+		//LdapUser stef = LdapUser.connect("stephane.batteux", "pas_le_bon");
+		//LdapUser flo2 = LdapUser.connect("flora.dupont", "mauvais_mot_de_passe");
 
 		// Test 
-		flo.deleteUser();
+		//flo.deleteUser();
 		
 		assertNotNull(flo);
-		assertNull(stef);
-		assertNull(flo2);	
+		//assertNull(stef);
+		//assertNull(flo2);	
 	}
 	
 	@Test 
 	public void tryUpdateUser(){
 		new LdapUser("flora.dupont@utt.fr", "test", "Flora", "Dupont", "flora.dupont").addUser();
 		LdapUser flo = LdapUser.connect("flora.dupont", "test");
-		LdapUser admin = LdapUser.connect("admin", "if052010");
+		
+			LdapUser admin = LdapUser.connect("admin", "ravel51.bend");
 		
 		//assertEquals("Flora", flo.getFirstname());
 		
 		flo.updateUser("flora.dupont@utt.fr", "hehehe", "arolf", "tnopud");
-
 
 		
 		LdapUser floModified = LdapUser.connect("flora.dupont", "hehehe");
@@ -66,8 +83,17 @@ public class LdapTest extends UnitTest {
 		assertEquals("flora.dupont@utt.fr", floModified.getEmail());
 		assertEquals("arolf", floModified.getFirstname());
 		assertEquals("tnopud", floModified.getLastname());
-		
-	}
+}
+	@Test
+	public void tryConnectWithWrongLogin()
+		{
+                	LdapUser flo = LdapUser.connect("florra.dupont", "test");
+			
+			//I've done a mistake on my login
+			
+			assertNull(flo);
+
+			}
 	
 	@Test
 	public void tryDeleteUser(){
@@ -76,14 +102,10 @@ public class LdapTest extends UnitTest {
 		new LdapUser("flora.dupont@utt.fr", "test", "Flora", "Dupont", "flora.dupont").addUser();
 		LdapUser flo = LdapUser.connect("flora.dupont", "test");
 		
+		
 		flo.deleteUser();
-		assertNotNull(flo);
-		
-		
-		
-		LdapUser flo2 = LdapUser.connect("flora.dupont", "test");
-		
-		assertNull(flo2);
+		assertNull(flo);
+	
 	
 	}
 	
