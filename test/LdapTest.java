@@ -23,10 +23,7 @@ public class LdapTest extends UnitTest {
 	    // Test
 		flo.deleteUser();
 		
-		assertNotNull(flo); 
-		assertEquals("Flora", flo.getFirstname());
-		assertEquals("Dupont", flo.getLastname());
-		assertEquals("flora.dupont@utt.fr", flo.getEmail());
+		
 	    
     }
 	
@@ -37,9 +34,6 @@ public class LdapTest extends UnitTest {
 		LdapUser flo = LdapUser.connect("flora.dupont", "test");
 		
 		// Test 
-		flo.deleteUser();
-		
-		assertNotNull(flo);
 	}
 	
 	@Test
@@ -105,6 +99,10 @@ public class LdapTest extends UnitTest {
 	@After
 	public void endTest(){
 		flo.deleteUser();
+		assertNotNull(flo); 
+		assertEquals("Flora", flo.getFirstname());
+		assertEquals("Dupont", flo.getLastname());
+		assertEquals("flora.dupont@utt.fr", flo.getEmail());
 	}
 
 }
