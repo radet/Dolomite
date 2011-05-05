@@ -17,14 +17,28 @@ public class LdapTest extends UnitTest {
 	}
 
 	@Test
+    public void createUser()
+	{
+		 new LdapUser("flora.dupont@utt.fr", "test", "Flora", "Dupont", "flora.dupont").addUser();
+		}
+
+	@Test
+    public void createAndConnectUser()
+	{
+            // Create a new user and save it
+                new LdapUser("flora.dupont@utt.fr", "test", "Flora", "Dupont", "flora.dupont").addUser();
+
+            // Retrieve the user with login+passwd
+                LdapUser flo = LdapUser.connect("flora.dupont", "test");
+	
+		}
+
+	@Test
     public void createAndRetrieveUser() 
 	{	
 	    
 	    // Test
-		flo.deleteUser();
-		
-		
-	    
+		//flo.deleteUser();
     }
 	
 	@Test
@@ -55,7 +69,6 @@ public class LdapTest extends UnitTest {
 		
 		flo.updateUser("flora.dupont@utt.fr", "hehehe", "arolf", "tnopud");
 
-
 		
 		LdapUser floWithOldPwd = LdapUser.connect("flora.dupont", "test");
 		
@@ -85,14 +98,10 @@ public class LdapTest extends UnitTest {
 	@Test
 	public void tryDeleteUser(){
 		
+		
 		flo.deleteUser();
-		assertNotNull(flo);
-		
-		
-		
-		LdapUser flo2 = LdapUser.connect("flora.dupont", "test");
-		
-		assertNull(flo2);
+		assertNull(flo);
+	
 	
 	}
 	
